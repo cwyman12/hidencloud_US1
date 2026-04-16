@@ -101,7 +101,7 @@ except ModuleNotFoundError:
 
 # ================= 配置常量 =================
 RENEW_DAYS = 7
-CACHE_FILE_NAME = 'hiden_cookies_MX.json'
+CACHE_FILE_NAME = 'hiden_cookies_US1.json'
 LOCAL_CACHE_PATH = os.path.join(os.path.dirname(__file__), CACHE_FILE_NAME)
 
 # ================= 全局日志收集器 =================
@@ -785,7 +785,7 @@ if __name__ == '__main__':
 
     final_content = "\n".join(ALL_LOGS)
     if final_content:
-        send_notify("HidenCloud (MX) 续期报告", final_content)
+        send_notify("HidenCloud (US1) 续期报告", final_content)
 
     if any_retry_needed:
         log_print("🔁 本轮存在可重试失败，脚本将返回退出码 1，供 GitHub Actions 延时再跑一次")
